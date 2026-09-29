@@ -7,11 +7,11 @@ type StatProps = {
 
 export function Stat({ label, value }: StatProps) {
   return (
-    <div className="min-w-0">
-      <p className="text-xs font-medium uppercase tracking-wide text-[var(--muted)]">
+    <div className="stat-panel min-w-0">
+      <p className="text-sm font-medium text-[var(--muted)]">
         {label}
       </p>
-      <p className="mt-1 text-2xl font-semibold tabular-nums tracking-tight text-[var(--foreground)]">
+      <p className="mt-3 text-3xl font-semibold tabular-nums tracking-tight text-[var(--foreground)]">
         {formatCount(value)}
       </p>
     </div>

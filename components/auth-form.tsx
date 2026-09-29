@@ -44,8 +44,8 @@ function SignUpForm() {
 
   if (state?.ok && state.needsEmailConfirmation) {
     return (
-      <div className="rounded-lg border border-[var(--border)] bg-[var(--surface)] p-6">
-        <h1 className="text-xl font-semibold tracking-tight">
+      <div className="auth-panel">
+        <h1 className="text-3xl font-semibold tracking-tight">
           Check your email
         </h1>
         <p className="mt-2 text-sm text-[var(--muted)]">
@@ -90,9 +90,9 @@ function AuthFormFields({
   return (
     <form
       action={formAction}
-      className="rounded-lg border border-[var(--border)] bg-[var(--surface)] p-6"
+      className="auth-panel"
     >
-      <h1 className="text-xl font-semibold tracking-tight">
+      <h1 className="text-3xl font-semibold tracking-tight">
         {mode === "login" ? "Sign in" : "Create your account"}
       </h1>
       <p className="mt-1 text-sm text-[var(--muted)]">

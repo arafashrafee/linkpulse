@@ -19,10 +19,10 @@ export function CreateLinkForm() {
   return (
     <form
       action={formAction}
-      className="space-y-4 rounded-lg border border-[var(--border)] bg-[var(--surface)] p-4 sm:p-5"
+      className="workspace-panel space-y-5"
     >
       <div>
-        <h2 className="text-sm font-semibold text-[var(--foreground)]">
+        <h2 className="text-lg font-semibold text-[var(--foreground)]">
           Create a short link
         </h2>
         <p className="mt-1 text-sm text-[var(--muted)]">

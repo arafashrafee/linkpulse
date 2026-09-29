@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Activity } from "lucide-react";
 
 import { signOut } from "@/actions/auth";
 
@@ -8,12 +9,13 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ userEmail }: SiteHeaderProps) {
   return (
-    <header className="border-b border-[var(--border)] bg-[var(--surface)]">
-      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-6">
+    <header className="site-header">
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link
           href={userEmail ? "/dashboard" : "/"}
-          className="text-sm font-semibold tracking-tight text-[var(--foreground)]"
+          className="brand-lockup"
         >
+          <span className="brand-mark"><Activity size={21} aria-hidden="true" /></span>
           LinkPulse
         </Link>
         <nav className="flex items-center gap-3 text-sm">
@@ -47,7 +49,7 @@ export function SiteHeader({ userEmail }: SiteHeaderProps) {
               </Link>
               <Link
                 href="/signup"
-                className="rounded-md bg-[var(--accent)] px-3 py-1.5 font-medium text-white transition hover:bg-[var(--accent-hover)]"
+                className="btn-primary"
               >
                 Get started
               </Link>

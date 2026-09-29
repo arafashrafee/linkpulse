@@ -26,13 +26,13 @@ export default async function DashboardPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-semibold tracking-tight">Dashboard</h1>
+        <h1 className="text-3xl font-semibold tracking-tight">Dashboard</h1>
         <p className="mt-1 text-sm text-[var(--muted)]">
           Create links and review recent activity.
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-6 border-b border-[var(--border)] pb-6 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <Stat label="Total links" value={stats.totalLinks} />
         <Stat label="Total clicks" value={stats.totalClicks} />
         <Stat label="Clicks · 7 days" value={stats.clicksLast7Days} />
